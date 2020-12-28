@@ -1,0 +1,652 @@
+/* ================ ALL ============= */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* =========== Global ============ */
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ec7532;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.line::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+}
+
+/* ============== HEADER ================= */
+
+.header {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header .contact_1 {
+  font-size: 14px;
+}
+
+.header .navbar-nav {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.header .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.25rem;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  box-shadow: 0 0 20px 0 #fbbd61;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.header .nav-link:hover::after,
+.header .active::after {
+  width: 100%;
+  /* class active giúp thẻ giữa nguyên đường gạch cam ngay từ đầu*/
+}
+
+/* ====================== SLIDER ==================== */
+
+.slider .carousel-indicators {
+  bottom: 60px;
+}
+
+.slider .carousel-indicators li {
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.slider .carousel-indicators li.active {
+  background-color: white;
+}
+
+.slider .carousel-caption {
+  left: 52%;
+  bottom: initial;
+  top: 55%;
+  /* căn giữa khung hình , tích theo chính kích thức của khối đó */
+  transform: translate(-50%, -50%);
+}
+
+.slider .carousel-caption > span {
+  font-size: 0.875rem;
+  color: #fbbd61;
+}
+
+.slider .carousel-caption h1 {
+  font-size: 3.25rem;
+}
+
+.slider .carousel-caption p {
+  font-size: 1.125rem;
+}
+
+.slider .carousel-caption .trailer span {
+  border-width: 2px !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .carousel-caption .trailer button {
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  box-shadow: none;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 0.5rem 2rem;
+}
+
+.slider .carousel-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #000000, transparent);
+}
+
+.slider .carousel-item {
+  height: 650px;
+}
+
+.slider .item-1 {
+  background: url(../img/hero-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.slider .item-2 {
+  background: url(../img/hero-2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.slider .item-3 {
+  background: url(../img/hero-3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* ==================== NEW ===================== */
+
+.new {
+  padding: 80px 0;
+}
+
+.new .row h4 {
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+.new .item .img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* --- Khối Ẩn -- */
+
+.new .item .img .info {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.4s;
+}
+
+/* Hover hiện ra Khối Ẩn */
+
+.new .item .img:hover .info {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.new .item .img .info i {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-width: 2px !important;
+}
+
+/* -- Khối Ẩn: hover hiện ra */
+
+.new .item .img::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532);
+  position: absolute;
+  top: 0;
+  left: -12.5rem;
+  transform: skewX(45deg);
+  transition: all 0.4s;
+  opacity: 0.9s;
+}
+
+.new .item .img:hover::before {
+  width: 300%;
+}
+
+.new .item .rating i {
+  font-size: 14px;
+  display: inline-block;
+  width: 18px;
+  color: #fbbd61;
+}
+
+.new .item .rating .grey {
+  color: #d8d8d8;
+}
+
+/* ========================== SCHEDULE =========================== */
+
+.schedule .nav-tabs .nav-item .nav-link:hover {
+  border: white;
+}
+
+.schedule .nav-tabs .nav-item .nav-link.active {
+  border: white;
+}
+
+.schedule .nav-tabs .nav-link {
+  position: relative;
+  color: #4a4a4a;
+  padding: 10px 30px;
+  font-size: 18px;
+}
+
+.schedule .nav-tabs .nav-link::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.schedule .nav-link:hover::after,
+.schedule .nav-link.active::after {
+  width: 100%;
+  /* class active giúp thẻ giữa nguyên đường gạch cam ngay từ đầu*/
+}
+
+.schedule .nav-link.active {
+  color: #ec7532;
+  text-decoration: underline;
+}
+
+.schedule .tab-content {
+  padding: 45px 0;
+}
+
+.schedule .row .img {
+  border-radius: 10px;
+}
+
+.schedule .row .schedule_detail .category {
+  color: #ec7532;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.schedule .row .schedule_detail h3 {
+  font-size: 24px;
+}
+
+.schedule .row .schedule_detail p {
+  color: #717171;
+}
+
+.schedule .row .schedule_detail a {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ec7532;
+}
+
+.schedule .row .viewing_times span {
+  letter-spacing: 1.5px;
+  color: #4a4a4a;
+  font-size: 12px;
+}
+
+.schedule .row .viewing_times .past {
+  opacity: 0.5;
+}
+
+.schedule .row .viewing_times button {
+  color: #717171;
+  border-radius: 5px;
+  background-color: #d8d8d8;
+  font-size: 14px;
+}
+
+.schedule .row .viewing_times .times_lenght {
+  font-size: 12px;
+}
+
+.schedule .row .viewing_times .times_lenght span {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 33px;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background: #4a4a4a;
+}
+
+/* ================== COMING ================= */
+
+.coming {
+  background: #000000;
+}
+
+.coming .coming_bg {
+  padding: 80px 0;
+  background-image: url(../img/slide-3.png);
+  background-size: cover;
+}
+
+.coming .line::after {
+  width: 150px;
+}
+
+.coming_detail > span {
+  font-size: 14px;
+  color: #ec7532;
+  letter-spacing: 2px;
+}
+
+.coming_detail h3 {
+  font-size: 34px;
+}
+
+.coming_detail .fa-star {
+  color: #fbbd61;
+  font-size: 14px;
+}
+
+.coming_detail .date {
+  color: #d8d8d8;
+  font-size: 14px;
+}
+
+.coming_detail p a {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ec7532;
+}
+
+.coming_trailer {
+  position: relative;
+}
+
+.coming_trailer i {
+  color: white;
+  border: 2px solid #ec7532;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  top: 115px;
+  left: 237px;
+  position: absolute;
+}
+
+.coming_list img {
+  border-radius: 10px;
+}
+
+.coming_list h5 {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.coming_list p {
+  font-size: 14px;
+  color: #717171;
+}
+
+.coming .item {
+  opacity: 0.35;
+  transition: all 0.5s;
+}
+
+.coming .item:hover {
+  opacity: 1;
+}
+
+/* ================== CONTACT ================= */
+
+.contact span {
+  font-size: 23px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #4a4a4a;
+}
+
+.contact p {
+  font-size: 46px;
+  font-weight: 400;
+  color: #ec7532;
+}
+
+/* ================== FOOTER ================= */
+
+.footer {
+  background-color: #000000;
+  padding: 75px 0 0;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  padding: 3px 0;
+  letter-spacing: 1.5px;
+}
+
+.footer a i {
+  width: 25px;
+}
+
+.footer a:hover {
+  color: #fbbd61;
+}
+
+.footer .item h6 {
+  color: #ec7532;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.copy-right {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================== RESPONSIVE =========================== */
+
+@media screen and (max-width: 1200px) {
+  .header .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .coming_trailer i {
+    top: 90px;
+    left: 188px;
+  }
+}
+
+/* -------- < 992px (Ipad thường)  */
+@media screen and (max-width: 992px) {
+  .header .navbar-nav {
+    background: #000000;
+    text-align: center;
+  }
+
+  .schedule .nav-item .nav-link {
+    padding: 10px 20px;
+  }
+
+  .coming_trailer i {
+    top: 55px;
+    left: 123px;
+  }
+
+  .footer .item {
+    margin-bottom: 25px;
+  }
+
+  .footer .item h6 {
+    margin-bottom: 10px;
+  }
+
+  .copy-right p {
+    font-size: 12px;
+  }
+}
+
+/* -------- < 768px (Ipad thường)  */
+
+@media screen and (max-width: 768px) {
+  .schedule .nav-tabs .nav-link {
+    padding: 10px 20px;
+  }
+
+  .coming_trailer i {
+    top: 103px;
+    left: 210px;
+  }
+
+  .footer .item h6 {
+    font-size: 13px;
+  }
+
+  .footer .item a {
+    font-size: 12px;
+  }
+
+  .schedule .tab-content img {
+    width: 50%;
+  }
+
+  .schedule .nav-item .nav-link {
+    padding: 10px 15px;
+  }
+
+  .schedule_detail {
+    margin-top: 20px;
+  }
+}
+
+/*----   < 576px (Màn hình điện thoại)  -----*/
+
+@media screen and (max-width: 576px) {
+  /* Header */
+  .header .container {
+    position: relative;
+  }
+
+  .header .contact_1 {
+    font-size: 12px;
+    margin-top: 0 !important;
+  }
+
+  .header .logo {
+    max-width: 150px;
+  }
+
+  .header .navbar {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .header .navbar-toggler {
+    padding: 0;
+  }
+
+  /*--- Slider */
+
+  .slider .carousel-caption {
+    text-align: right;
+    padding-top: 0;
+  }
+
+  .slider .carousel-caption h1 {
+    font-size: 40px;
+  }
+
+  .slider .carousel-caption p {
+    font-size: 16px;
+  }
+
+  /* --- New */
+
+  .new .item img {
+    width: 100%;
+  }
+
+  /*---- Schedule */
+
+  .schedule li {
+    display: block;
+    width: 200px;
+  }
+
+  .schedule .nav-link.active {
+    text-decoration: none;
+    border: none;
+  }
+
+  .schedule .nav-link {
+    font-size: 16px;
+  }
+
+  .schedule .nav-tabs {
+    border: none;
+  }
+
+  .schedule .nav-tabs .nav-link::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    transition: all 0.5s;
+  }
+
+  .schedule .nav-link.active::after {
+    width: 40%;
+    /* class active giúp thẻ giữa nguyên đường gạch cam ngay từ đầu*/
+  }
+
+  /*---- Schedule Content */
+
+  .schedule .tab-content img {
+    width: 100%;
+  }
+
+  .schedule_detail {
+    margin-top: 20px;
+  }
+
+  .schedule .viewing_times button {
+    margin-bottom: 10px;
+  }
+
+  .schedule .time-list {
+    display: block;
+  }
+
+  /* --- FOOTER */
+
+  .coming_trailer i {
+    top: 103px;
+    left: 213px;
+  }
+}
